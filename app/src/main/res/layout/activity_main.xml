@@ -21,14 +21,16 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-            <!-- TODO (03) Replace the titleFragment with the navHostFragment
+            <!-- TODO (03) Replace the titleFragment with the navHostFragment //DONE
                  Change the ID to myNavHostFragment
                  Change the name = androidx.navigation.fragment.NavHostFragment -->
-            <!-- TODO (04) Add app:navGraph pointing to the @navigation/navigation resource -->
-            <!-- TODO (05) Add app:defaultNavHost = true -->
+            <!-- TODO (04) Add app:navGraph pointing to the @navigation/navigation resource  //DONE -->
+            <!-- TODO (05) Add app:defaultNavHost = true which means that this host will handle back key //DONE -->
             <fragment
-                android:id="@+id/titleFragment"
-                android:name="com.example.android.navigation.TitleFragment"
+                android:id="@+id/myNavHostFragment"
+                android:name="androidx.navigation.fragment.NavHostFragment"
+                app:navGraph="@navigation/navigation"
+                app:defaultNavHost="true"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
         </LinearLayout>
