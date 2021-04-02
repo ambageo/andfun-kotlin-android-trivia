@@ -46,7 +46,7 @@ class TitleFragment : Fragment() {
         /*
         * Or we can even let the Navigation crate the onClick listener for us
         */
-        binding.playButton.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_titleFragment_to_gameFragment))
+        //binding.playButton.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_titleFragment_to_gameFragment))
         return binding.root
     }
     // TODO (06) Add the Title Fragment to the Navigation Graph //DONE
