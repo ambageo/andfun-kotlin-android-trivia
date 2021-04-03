@@ -43,11 +43,13 @@ class GameWonFragment : Fragment() {
         val binding: FragmentGameWonBinding = DataBindingUtil.inflate(
                 inflater, R.layout.fragment_game_won, container, false)
         binding.nextMatchButton.setOnClickListener { view: View ->
-            // TODO (10) Replace action ID with actionGameWonFragmentToGameFragment
+            // TODO (10) Replace action ID with actionGameWonFragmentToGameFragment //DONE
             // From GameWonFragmentDirections
-            view.findNavController().navigate(R.id.action_gameWonFragment_to_gameFragment)
+            view.findNavController().navigate(GameWonFragmentDirections.actionGameWonFragmentToGameFragment())
         }
-        // TODO (08) Add and show toast to get the GameWonFragmentArgs from the arguments Bundle
+        // TODO (08) Add and show toast to get the GameWonFragmentArgs from the arguments Bundle //DONE
+        val args = GameWonFragmentArgs.fromBundle(requireArguments())
+        Toast.makeText(requireContext(), "NumCorrect: ${args.numCorrect}, NumQuestions: ${args.numQuestions}", Toast.LENGTH_SHORT).show()
         // "NumCorrect: ${args.numCorrect}, NumQuestions: ${args.numQuestions}"
         return binding.root
     }
